@@ -2,6 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import FooterVue from './components/layout/Footer.vue'
 import { ref } from 'vue'
 
 defineProps({
@@ -39,15 +40,16 @@ const open = ref(false)
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-            <router-link to="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</router-link>
+            <router-link to="/"        :class="($route.path ==='/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</router-link>
              
-            <router-link to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</router-link>
+            <router-link to="/about"   :class="($route.path ==='/about') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" px-3 py-2 rounded-md text-sm font-medium">About</router-link>
             
-            <router-link to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">contacto</router-link>
+            <router-link to="/skills"  :class="($route.path ==='/skills') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Skills</router-link>
             
-            <router-link to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">contacto</router-link>
+            <router-link to="/work"    :class="($route.path ==='/work') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">work</router-link>
             
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projectos</a>
+            <router-link to="/contact" :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'"  class="px-3 py-2 rounded-md text-sm font-medium">contacto</router-link>
+            
           </div>
         </div>
       </div>
@@ -78,7 +80,10 @@ const open = ref(false)
     </div>
   </div>
 </nav>
+
   <router-view />
+
+  <FooterVue />
 </template>
 
 <style>
