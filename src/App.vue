@@ -16,12 +16,50 @@ export default {
         const openlang = ref(false)
         const lang = ref('ENG')
 
-        function onChangeLang (langm) {
+        function onChangeLang (langm, rout) {
           //alert('a cambiado el lenguaje' +langm)
           openlang.value=false;
           lang.value=langm;
-          //console.log(this.$router.path)
-          router.push('/esp/')
+          console.log(this.lang)
+          console.log(rout)
+          if( langm==='ESP' ){
+            switch (rout) {
+              case "/":
+              router.push('/esp/')
+              break;
+              case "/about":
+              router.push('/esp/acerca/')
+              break;
+              case "/skills":
+              router.push('/esp/habilidades')
+              break;
+              case "/work":
+              router.push('/esp/trabajo')
+              break;
+              case "/contact":
+                router.push('/esp/contacto/')
+              break;
+            }
+          }else if( langm==='ENG' ){
+            switch (rout) {
+              case "/esp/":
+              router.push('/')
+              break;
+              case "/esp/acerca":
+              router.push('/about')
+              break;
+              case "/esp/habilidades":
+              router.push('/skills')
+              break;
+              case "/esp/trabajo":
+              router.push('/work')
+              break;
+              case "/esp/contact":
+                router.push('/contact')
+              break;
+            }
+          } 
+         // router.push('/esp/')
         }
         return {
           // schema,
@@ -116,8 +154,8 @@ export default {
 
           <div :class="openlang ? ' block': 'hidden'" class="origin-top-right transition ease-out duration-100 z-10 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
             <!-- Active: "bg-gray-100", Not Active: "" -->
-            <a href="#" v-on:click="onChangeLang('ENG')" class="block px-4 py-2 text-sm bg-gray-100 text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">ENG</a>
-            <a href="#" v-on:click="onChangeLang('ESP')" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">ESP</a>
+            <a href="#" v-on:click="onChangeLang('ENG',$route.path)" class="block px-4 py-2 text-sm bg-gray-100 text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">ENG</a>
+            <a href="#" v-on:click="onChangeLang('ESP',$route.path)" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">ESP</a>
           </div>
         </div>
       </div>
