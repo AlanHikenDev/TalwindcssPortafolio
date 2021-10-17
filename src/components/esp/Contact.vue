@@ -3,7 +3,7 @@ export default {
   props: {
       msg: {
       type: String ,
-      default: 'CONTACT ME'
+      default: 'CONTACTA CON MIGO'
     }
   },
   methods:{
@@ -56,13 +56,13 @@ export default {
       </div>
       <div class="flex justify-around text-center divide-x divide-gray-300">
         <a href="http://facebook.com" target="blank" class="w-16 h-16  p-1 cursor-pointer">
-          <img src="../assets/imgs/facebook-logo-3-1.png" alt="facebook" class />
+          <img src="../../assets/imgs/facebook-logo-3-1.png" alt="facebook" class />
         </a>
         <span href="#" v-on:click="sendMessasWatssap" class="w-16 h-16 p-1 cursor-pointer">
-          <img src="../assets/imgs/wats.png" alt="watsapp" class />
+          <img src="../../assets/imgs/wats.png" alt="watsapp" class />
         </span>
         <a href="https://github.com/" target="blank" class="w-16 h-16 p-1 cursor-pointer">
-          <img src="../assets/imgs/25231.png" alt="github" class />
+          <img src="../../assets/imgs/25231.png" alt="github" class />
         </a>
       </div>
     </form>

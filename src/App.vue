@@ -1,16 +1,38 @@
-<script setup>
+<script >
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import FooterVue from './components/layout/Footer.vue'
-import { ref } from 'vue'
+import { ref } from 'vue';
+import router from "../src/router";
+export default {
+    name: 'MAIN',
+    components: {
+      FooterVue
+      },
+      setup () {
+          
+        const open = ref(false)
+        const openlang = ref(false)
+        const lang = ref('ENG')
 
-defineProps({
-  msg: String
-})
-
-const open = ref(false)
-const openlang = ref(false)
+        function onChangeLang (langm) {
+          //alert('a cambiado el lenguaje' +langm)
+          openlang.value=false;
+          lang.value=langm;
+          //console.log(this.$router.path)
+          router.push('/esp/')
+        }
+        return {
+          // schema,
+          onChangeLang,
+          open,
+          openlang,
+          lang,
+        }
+      },
+    
+}
 </script>
 
 <template>
@@ -38,9 +60,9 @@ const openlang = ref(false)
           <img class="hidden lg:block h-8 w-auto" src="../src/assets/solo19.png" alt="Workflow">
         </div>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-4">
+          <div v-if="lang ==='ENG'" class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-
+                
             <router-link to="/"        :class="($route.path ==='/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</router-link>
              
             <router-link to="/about"   :class="($route.path ==='/about') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" px-3 py-2 rounded-md text-sm font-medium">About</router-link>
@@ -49,14 +71,28 @@ const openlang = ref(false)
             
             <router-link to="/work"    :class="($route.path ==='/work') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">work</router-link>
             
-            <router-link to="/contact" :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'"  class="px-3 py-2 rounded-md text-sm font-medium">contacto</router-link>
+            <router-link to="/contact" :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'"  class="px-3 py-2 rounded-md text-sm font-medium">contact</router-link>
+            
+          </div>
+          <div v-if="lang ==='ESP'" class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                
+            <router-link to="/esp/"        :class="($route.path ==='/esp/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">INICIO</router-link>
+             
+            <router-link to="/esp/acerca"   :class="($route.path ==='/esp/acerca') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" px-3 py-2 rounded-md text-sm font-medium">ACERCA DE </router-link>
+            
+            <router-link to="/esp/habilidades"  :class="($route.path ==='/esp/habilidades') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">HABILIDADES</router-link>
+            
+            <router-link to="/esp/trabajo"    :class="($route.path ==='/esp/trabajo') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">TRABAJO</router-link>
+            
+            <router-link to="/esp/contacto" :class="($route.path ==='/esp/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'"  class="px-3 py-2 rounded-md text-sm font-medium">CONTACTO</router-link>
             
           </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-          <span class="">EN</span>
+          <span class="">{{lang}}</span>
           <!-- Heroicon name: outline/bell -->
           
         </button> 
@@ -80,8 +116,8 @@ const openlang = ref(false)
 
           <div :class="openlang ? ' block': 'hidden'" class="origin-top-right transition ease-out duration-100 z-10 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
             <!-- Active: "bg-gray-100", Not Active: "" -->
-            <a href="#" class="block px-4 py-2 text-sm bg-gray-100 text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">ENG</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">ESP</a>
+            <a href="#" v-on:click="onChangeLang('ENG')" class="block px-4 py-2 text-sm bg-gray-100 text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">ENG</a>
+            <a href="#" v-on:click="onChangeLang('ESP')" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">ESP</a>
           </div>
         </div>
       </div>
