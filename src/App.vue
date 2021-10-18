@@ -45,7 +45,7 @@ export default {
               case "/esp/":
               router.push('/')
               break;
-              case "/esp/acerca":
+              case "/esp/acerca/":
               router.push('/about')
               break;
               case "/esp/habilidades":
