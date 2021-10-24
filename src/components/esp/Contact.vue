@@ -79,13 +79,14 @@ export default {
 </script>
 
 <template>
+<div>
   <div class="col-span-6 sm:col-start-3 sm:col-end-7 px-4 pt-7 text-center">
     <div class="col-start-1 col-end-7 sm:col-start-3 sm:col-end-5 px-4 pt-7 pb-5 mb-5">
       <p class="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-blue-900 text-2xl sm:text-5xl"
-      >CONTACT</p>
+      >CONTACTO</p>
     </div>
   </div>
-  <div v-if="messagesend" class="bg-gray-100  flex justify-center items-center">
+  <div v-if="messagesend" class="bg-gray-100 mt-10 pt-10 mb-10 pb-10 flex justify-center items-center">
     <div
       action
       class="max-w-lg border border-gray-200 shadow-xs mx-auto rounded-lg p-10 bg-white text-center space-y-6 flex-grow"
@@ -157,6 +158,7 @@ export default {
     </div>
     </div>
    </div> 
+</div>   
 </template>
 
 <style scoped>

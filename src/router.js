@@ -34,4 +34,15 @@ const router = createRouter({
   routes,
 });
 
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
+router.beforeEach((to, from) => {
+  // ...
+  // explicitly return false to cancel the navigation
+  delay(1000).then(() =>{ console.log('algo'); window.scrollTo(0, 0);});
+  //return false
+})
+
 export default router;

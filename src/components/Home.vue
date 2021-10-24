@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="flex flex-col justify-center sm:py-12">
     <div class="relative py-3 mx-auto sm:max-w-xl sm:mx-auto">
       <img src="../assets/g19.png" />
@@ -124,7 +125,7 @@
       </router-link>
     </div>
     </div>
-
+</div>
 </template>
 
 <script>

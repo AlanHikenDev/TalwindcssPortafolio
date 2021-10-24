@@ -5,7 +5,6 @@ defineProps({
 
   msg: {
       type: String,
-      required: true,
       default: 'TRABAJO'
     }
 })
@@ -13,6 +12,7 @@ defineProps({
 </script>
 
 <template>
+<div>
 <div class=" col-span-6 sm:col-start-3 sm:col-end-7 px-4 pt-7 text-center">
   <div class="col-start-1 col-end-7 sm:col-start-3 sm:col-end-5 px-4 pt-7 pb-5 mb-5" >
     <p class=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-blue-900 text-2xl sm:text-5xl ">   {{ msg }}   </p> 
@@ -72,7 +72,7 @@ defineProps({
     </div>
   </div>
 </div>
-
+</div>
 </template>
 
 <style scoped>

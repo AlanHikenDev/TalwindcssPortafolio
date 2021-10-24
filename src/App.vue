@@ -3,7 +3,7 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import FooterVue from './components/layout/Footer.vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import router from "../src/router";
 export default {
     name: 'MAIN',
@@ -11,7 +11,7 @@ export default {
       FooterVue
       },
       setup () {
-          
+        
         const open = ref(false)
         const openlang = ref(false)
         const lang = ref('ENG')
@@ -61,6 +61,9 @@ export default {
           } 
          // router.push('/esp/')
         }
+        onMounted(()=>{
+          window.scrollTo(0, 0)
+        });
         return {
           // schema,
           onChangeLang,
@@ -101,15 +104,15 @@ export default {
           <div v-if="lang ==='ENG'" class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 
-            <router-link to="/"        :class="($route.path ==='/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</router-link>
+            <router-link to="/"        :class="($route.path ==='/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">HOME</router-link>
              
-            <router-link to="/about"   :class="($route.path ==='/about') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" px-3 py-2 rounded-md text-sm font-medium">About</router-link>
+            <router-link to="/about"   :class="($route.path ==='/about') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" px-3 py-2 rounded-md text-sm font-medium">ABOUT</router-link>
             
-            <router-link to="/skills"  :class="($route.path ==='/skills') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Skills</router-link>
+            <router-link to="/skills"  :class="($route.path ==='/skills') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">SKILLS</router-link>
             
-            <router-link to="/work"    :class="($route.path ==='/work') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">work</router-link>
+            <router-link to="/work"    :class="($route.path ==='/work') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">WORK</router-link>
             
-            <router-link to="/contact" :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'"  class="px-3 py-2 rounded-md text-sm font-medium">contact</router-link>
+            <router-link to="/contact" :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'"  class="px-3 py-2 rounded-md text-sm font-medium">CONTACTO</router-link>
             
           </div>
           <div v-if="lang ==='ESP'" class="flex space-x-4">
@@ -151,35 +154,80 @@ export default {
             Leaving: "transition ease-in duration-75"
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95" -->
-
-          <div :class="openlang ? ' block': 'hidden'" class="origin-top-right transition ease-out duration-100 z-10 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+          <transition name="slide-fade"
+            enter-active-class="transition-all transition-fastest ease-out-quad"
+            leave-active-class="transition-all transition-faster ease-in-quad"
+            enter-class="opacity-0 scale-70"
+            enter-to-class="opacity-100 scale-100"
+            leave-class="opacity-100 scale-100"
+            leave-to-class="opacity-0 scale-70"
+          >    
+          <div v-if="openlang"  class="origin-top-right transition ease-out duration-100 z-10 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
             <!-- Active: "bg-gray-100", Not Active: "" -->
-            <a href="#" v-on:click="onChangeLang('ENG',$route.path)" class="block px-4 py-2 text-sm bg-gray-100 text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">ENG</a>
-            <a href="#" v-on:click="onChangeLang('ESP',$route.path)" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">ESP</a>
+            <a href="#" v-on:click="onChangeLang('ENG',$route.path)" class="block px-4 py-2 text-sm" :class="(lang=='ENG')? 'bg-gray-200 text-gray-700':'text-gray-700'" role="menuitem" tabindex="-1" id="user-menu-item-0">ENG</a>
+            <a href="#" v-on:click="onChangeLang('ESP',$route.path)" class="block px-4 py-2 text-sm" :class="(lang=='ESP')? 'bg-gray-200 text-gray-700':'text-gray-700'" role="menuitem" tabindex="-1" id="user-menu-item-1">ESP</a>
           </div>
+          </transition>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden " :class="open ? 'block': 'hidden'" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
+  <transition
+    enter-active-class="transition-all transition-fastest ease-out-quad"
+    leave-active-class="transition-all transition-faster ease-in-quad"
+    enter-class="opacity-0 scale-70"
+    enter-to-class="opacity-100 scale-100"
+    leave-class="opacity-100 scale-100"
+    leave-to-class="opacity-0 scale-70"
+  >
+  <div class="sm:hidden " v-if="open" id="mobile-menu">
+    <div v-if="lang ==='ENG'" class="px-2 pt-2 pb-3 space-y-1">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <router-link to="/"        :class="($route.path ==='/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</router-link>
-      <router-link to="/about"        :class="($route.path ==='/about') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About</router-link>
-      <router-link to="/skills"        :class="($route.path ==='/skills') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Skills</router-link>
-      <router-link to="/work"        :class="($route.path ==='/work') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">work</router-link>
-      <router-link to="/contact"        :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Contact</router-link>
+      <router-link to="/"        :class="($route.path ==='/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">HOME</router-link>
+      <router-link to="/about"        :class="($route.path ==='/about') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">ABOUT</router-link>
+      <router-link to="/skills"        :class="($route.path ==='/skills') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">SKILLS</router-link>
+      <router-link to="/work"        :class="($route.path ==='/work') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">WORK</router-link>
+      <router-link to="/contact"        :class="($route.path ==='/contact') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">CONTACT</router-link>
+    </div>
+    <div v-if="lang ==='ESP'" class="px-2 pt-2 pb-3 space-y-1">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <router-link to="/es/"        :class="($route.path ==='/es/') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">INICIO</router-link>
+      <router-link to="/esp/acerca"        :class="($route.path ==='/esp/acerca') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">ACERCA</router-link>
+      <router-link to="/esp/habilidades"        :class="($route.path ==='/esp/habilidades') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">HABILIDADES</router-link>
+      <router-link to="/esp/trabajo"        :class="($route.path ==='/esp/trabajo') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">TRABAJO</router-link>
+      <router-link to="/esp/contacto"        :class="($route.path ==='/esp/contacto') ? ' bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">CONTACTO</router-link>
     </div>
   </div>
+  </transition>
 </nav>
-
-  <router-view />
-
+<router-view v-slot="{ Component }">
+  <transition 
+    enter-active-class="transition delay-700 duration-700 ease-out-quad"
+    leave-active-class="transition delay-700 duration-700 ease-in-out"
+    enter-class="opacity-0 transform delay-700  scale-70"
+    enter-to-class="opacity-100 transform delay-700 scale-700"
+    leave-class="opacity-100 transform delay-700  scale-700"
+    leave-to-class="opacity-0 transform delay-700 scale-70"
+  >
+    <component :is="Component" >
+      
+    </component>
+  </transition>
+</router-view>
   <FooterVue />
 </template>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
 </style>

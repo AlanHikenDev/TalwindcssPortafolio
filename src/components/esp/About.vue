@@ -38,7 +38,13 @@
 </template>
 
 <script>
+import { onMounted } from 'vue';
 export default {
-  name: "About",
-};
+  name: "Acerca de",
+  setup() {
+    onMounted(()=>{
+          window.scrollTo(0, 0)
+        });
+  },
+}
 </script>
