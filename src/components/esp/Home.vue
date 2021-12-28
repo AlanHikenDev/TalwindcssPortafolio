@@ -1,5 +1,5 @@
 <template>
-<div> 
+<div>
   <div class="flex flex-col justify-center sm:py-12">
     <div class="relative py-3 mx-auto sm:max-w-xl sm:mx-auto">
       <img src="../../assets/g19.png" />
@@ -50,7 +50,7 @@
           <div class="w-32 h-32  rounded-full bg-white  mx-auto border-2">
           <img
             class="w-20 h-20 mx-auto mt-6  "
-            src="../../assets/tailwindcss.SVG"
+            src="../../assets/tailwind.png"
           />
           </div>
         </div>

@@ -92,35 +92,35 @@ export default {
       class="max-w-lg border border-gray-200 shadow-xs mx-auto rounded-lg p-10 bg-white text-center space-y-6 flex-grow"
     >
       <div class="flex flex-col">
-        <label for="email" class="self-start mb-2 font-medium text-gray-800">Enter your email </label>
+        <label for="email" class="self-start mb-2 font-medium text-gray-800">Correo electronico </label>
         <input
           type="text"
           v-model="email"
-          placeholder="type your email"
+          placeholder="Introduce tu correo electronico"
           class="px-2 py-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded"
           autocomplete="off"
         />
         <div v-if="valid" class="bg-red-100 border mt-3 border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-          <strong class="font-bold">Required!</strong>
-          <span class="block sm:inline">Please enter your email correctly.</span>
+          <strong class="font-bold">Requerido! </strong>
+          <span class="block sm:inline">Por favor introduce un correo valido.</span>
           <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
             <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
           </span>
         </div>
       </div>
       <div class="flex flex-col">
-        <label for="pass" class="self-start mb-2 font-medium text-gray-800">Message </label>
-        <textarea id="about" v-model="mensaje" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="don't be shy talk to me "></textarea> 
+        <label for="pass" class="self-start mb-2 font-medium text-gray-800">Mensaje  </label>
+        <textarea id="about" v-model="mensaje" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="no tengas pena comunicate con migo y aumenta la productividad :)"></textarea> 
         <div v-if="valid" class="bg-red-100 border mt-3 border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-          <strong class="font-bold">Required !</strong>
-          <span class="block sm:inline">please indicate the subject .</span>
+          <strong class="font-bold">Requerido! </strong>
+          <span class="block sm:inline">Por favor indica tu asunto .</span>
           <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
             <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
           </span>
         </div>    
       </div>
 
-      <button v-on:click="enviarMensaje" class="w-full bg-indigo-300 py-2 rounded font-semibold">Send</button>
+      <button v-on:click="enviarMensaje" class="w-full bg-indigo-300 py-2 rounded font-semibold">Enviar</button>
       <div class="flex items-center text-gray-800">
         <span class="block border border-gray-200 w-1/3 mr-2"></span>
         contact me with 

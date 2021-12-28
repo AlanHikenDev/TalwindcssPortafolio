@@ -15,15 +15,13 @@ defineProps({
   <div class="col-start-1 col-end-7 sm:col-start-3 sm:col-end-5 px-4 pt-7 pb-5 mb-5" >
     <p class=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-blue-900 text-2xl sm:text-5xl ">MY SKILLS</p> 
   </div>
-</div>
-<div class=" bg-blue-900 grid grid-cols-1 sm:grid-cols-6 gap-4 pb-28">
+</div><div class=" bg-blue-900 grid grid-cols-1 sm:grid-cols-6 gap-4 pb-28">
   <div class="col-start-1 col-end-7 sm:col-start-3 sm:col-end-5 px-4 pt-7 pb-5 mb-5" >
       <div class="text-center">
-      <h2 class="mt-3 text-white text-3xl font-semibold"> What are my skills ? </h2>
+      <h2 class="mt-3 text-white text-3xl font-semibold"> What are my Skills? </h2>
       <p class="mt-3 text-white ">
-       Since I started working professionally in web development more than 5 years ago, 
-       I have worked on different projects and gathered different skills, both in back end and front end, 
-       in pre-school work modalities and more recently at distance. 
+       Throughout my professional training I have developed a set of skills that allow me to design, develop, design and create applications and web pages for the internet and intranet.
+        I have a correct knowledge of the software architecture from the database to the user interface which allows me to offer complete solutions.
       </p>
     </div> 
   </div>
@@ -39,7 +37,7 @@ defineProps({
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> FRONT END </h2>
         <p class="mt-3 text-gray-600 ">
-          I like to code things from scratch and bring the most innovative designs of the voices to the different web platforms. 
+         To comply with the design and visual style definitions that different projects may require, I work with the following programming languages that allow me to offer a solution in modern and elegant interfaces.
         </p>
         <h2 class="mt-3 text-gray-800 text-1 font-semibold"> Languages </h2>
         <ul class="list-disc space-y-2">
@@ -114,8 +112,9 @@ defineProps({
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> BACK END </h2>
         <p class="mt-3 text-gray-600 ">
-          Tailwind CSS is a highly customizable low-level CSS framework that allows you to create custom layouts 
-          by removing the pre-defined component styles that you would need to overwrite anyway. 
+          As a Back-end developer I am qualified to be responsible for the programming of the logic and the
+           solutions so that all the actions requested by in a web page are executed correctly.
+           A solid knowledge in managing the most common and most powerful servers to process information.
         </p>
         <h2 class="mt-3 text-gray-800 text-1 font-semibold"> Languages </h2>
         <ul class="list-disc space-y-2">
@@ -179,8 +178,9 @@ defineProps({
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> DEV SKILLS</h2>
         <p class="mt-3 text-gray-600 ">
-          Flexible and adaptable not only to the Traditional MVC (Model view controller) 
-          but to reduce code it proposes to use Routes with clousures. 
+          An excellent knowledge of the most common and efficient programming methodologies,
+           a determination to stay focused during periods of development and high capacity for
+           concentration.
         </p>
         <h2 class="mt-3 text-gray-800 text-1 font-semibold"> Languages </h2>
         <ul class="list-disc space-y-2">
@@ -191,7 +191,7 @@ defineProps({
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" >teamwork  </span> 
+              <span class="  text-gray-900 uppercase" >Trabajo en equipo  </span> 
             </p>
           </li>
           <li class="flex items-start">
@@ -201,7 +201,7 @@ defineProps({
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="items-start  text-gray-900 uppercase" > passionate about code  </span> 
+              <span class="items-start  text-gray-900 uppercase" > Apasionado por el codigo    </span> 
             </p>
           </li>
           <li class="flex items-start">
@@ -211,7 +211,7 @@ defineProps({
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" > logical thinking  </span> 
+              <span class="  text-gray-900 uppercase" > Pensamiento lógico </span> 
             </p>
           </li> 
           <li class="flex items-start">
@@ -221,7 +221,7 @@ defineProps({
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" > efficient   </span> 
+              <span class="  text-gray-900 uppercase" > Eficiente   </span> 
             </p>
           </li>
           <li class="flex items-start">
@@ -231,7 +231,7 @@ defineProps({
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" > creative   </span> 
+              <span class="  text-gray-900 uppercase" > Creativo   </span> 
             </p>
           </li>         
         </ul>
@@ -239,7 +239,6 @@ defineProps({
     </div>
   </div>
 
-  
 </div>
 
 <div class=" bg-blue-900 grid grid-cols-1 sm:grid-cols-6  pb-28 pt-10">
@@ -249,7 +248,9 @@ defineProps({
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> FRAMEWORKS </h2>
         <p class="mt-3 text-gray-600 ">
-          I like to code things from scratch and bring the most innovative designs of the voices to the different web platforms. 
+          Starting from a base structure to develop projects with specific objectives that is knowledge in frameworks,
+           for this I specialize in frameworks that allow a faster and more efficient development that allows me to offer products with a long
+           duration and easy maintenance.
         </p>
         <ul class="list-disc space-y-2 ">
               <li class="flex items-start ">
@@ -300,7 +301,7 @@ defineProps({
                 <span class="h-6 flex items-center sm:h-7">
                   <img
                     class="lex-shrink-0 h-5 w-5  "
-                    src="../assets/tailwindcss.svg"
+                    src="../assets/tailwind.png"
                   />
                 </span>
                  <p class="ml-2">
@@ -339,8 +340,8 @@ defineProps({
     <div class=" h-3/4 py-4 px-8 bg-white shadow-lg rounded-lg my-20">
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> DEV TOOLS </h2>
-        <p class="mt-3 text-gray-600 ">
-          I like to code things from scratch and bring the most innovative designs of the voices to the different web platforms. 
+        <p class="mt-3 text-gray-600 pb-3 pt-2">
+         The tools that every developer should master and more.
         </p>
         <ul class="list-disc space-y-2 ">
            <li class="flex items-start">

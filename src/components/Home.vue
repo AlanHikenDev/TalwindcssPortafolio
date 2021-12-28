@@ -49,7 +49,7 @@
           <div class="w-32 h-32  rounded-full bg-white  mx-auto border-2">
           <img
             class="w-20 h-20 mx-auto mt-6  "
-            src="../assets/tailwindcss.SVG"
+            src="../assets/tailwind.png"
           />
           </div>
         </div>

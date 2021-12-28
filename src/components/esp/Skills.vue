@@ -29,17 +29,16 @@ export default {
 <div>
 <div class=" col-span-6 sm:col-start-3 sm:col-end-7 px-4 pt-7 text-center">
   <div class="col-start-1 col-end-7 sm:col-start-3 sm:col-end-5 px-4 pt-7 pb-5 mb-5" >
-    <p class=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-blue-900 text-2xl sm:text-5xl ">HABILIDADES </p> 
+    <p class=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-blue-900 text-2xl sm:text-5xl "> HABILIDADES </p> 
   </div>
 </div>
 <div class=" bg-blue-900 grid grid-cols-1 sm:grid-cols-6 gap-4 pb-28">
   <div class="col-start-1 col-end-7 sm:col-start-3 sm:col-end-5 px-4 pt-7 pb-5 mb-5" >
       <div class="text-center">
-      <h2 class="mt-3 text-white text-3xl font-semibold"> What are my skills ? </h2>
+      <h2 class="mt-3 text-white text-3xl font-semibold"> ¿ Cuales son mis Habilidades ? </h2>
       <p class="mt-3 text-white ">
-       Since I started working professionally in web development more than 5 years ago, 
-       I have worked on different projects and gathered different skills, both in back end and front end, 
-       in pre-school work modalities and more recently at distance. 
+       A lo largo de mi formacion profesional eh desarrollado un conjunto de habilidades que me permiten diseñar, desarrollar, diseñar y crear aplicaciones y paginas web para internet e intranet.
+       Tengo un conocimiento correcto de la arquitectura de software desde la base de datos hasta la interfaz de usurio lo que me permite ofrecer soluciones completas. 
       </p>
     </div> 
   </div>
@@ -55,7 +54,8 @@ export default {
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> FRONT END </h2>
         <p class="mt-3 text-gray-600 ">
-          I like to code things from scratch and bring the most innovative designs of the voices to the different web platforms. 
+          Para cumplir con las definiciones de diseño y estilo visual que puedan requerir los diferentes proyectos
+          trabajo con los siguientes lenguajes de programacion que me permiten ofrecer una solucion en interfaces modernas y elegantes. 
         </p>
         <h2 class="mt-3 text-gray-800 text-1 font-semibold"> Languages </h2>
         <ul class="list-disc space-y-2">
@@ -130,8 +130,9 @@ export default {
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> BACK END </h2>
         <p class="mt-3 text-gray-600 ">
-          Tailwind CSS is a highly customizable low-level CSS framework that allows you to create custom layouts 
-          by removing the pre-defined component styles that you would need to overwrite anyway. 
+          Como desarrollador Back-end estoy capacitado para ser responsable de la programacion de la lógica y las 
+          soluciones para que todas las acciones solicitadas por en una pagina web sean ejecutadas de manera correcta. 
+          Un conocimiento solido en el manejo de los servidores mas comunes y mas poderosos para procesar la informacion.
         </p>
         <h2 class="mt-3 text-gray-800 text-1 font-semibold"> Languages </h2>
         <ul class="list-disc space-y-2">
@@ -195,8 +196,9 @@ export default {
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> DEV SKILLS</h2>
         <p class="mt-3 text-gray-600 ">
-          Flexible and adaptable not only to the Traditional MVC (Model view controller) 
-          but to reduce code it proposes to use Routes with clousures. 
+          Un excelente conocimiento de las Metodologías de programación mas comunes y mas eficientes,
+          una determinacion para mantenerme concentrado durante periodos de desarrollo y alta capacidad de
+          concentración. 
         </p>
         <h2 class="mt-3 text-gray-800 text-1 font-semibold"> Languages </h2>
         <ul class="list-disc space-y-2">
@@ -207,7 +209,7 @@ export default {
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" >teamwork  </span> 
+              <span class="  text-gray-900 uppercase" >Trabajo en equipo  </span> 
             </p>
           </li>
           <li class="flex items-start">
@@ -217,7 +219,7 @@ export default {
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="items-start  text-gray-900 uppercase" > passionate about code  </span> 
+              <span class="items-start  text-gray-900 uppercase" > Apasionado por el codigo    </span> 
             </p>
           </li>
           <li class="flex items-start">
@@ -227,7 +229,7 @@ export default {
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" > logical thinking  </span> 
+              <span class="  text-gray-900 uppercase" > Pensamiento lógico </span> 
             </p>
           </li> 
           <li class="flex items-start">
@@ -237,7 +239,7 @@ export default {
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" > efficient   </span> 
+              <span class="  text-gray-900 uppercase" > Eficiente   </span> 
             </p>
           </li>
           <li class="flex items-start">
@@ -247,7 +249,7 @@ export default {
                   </svg>
             </span>
             <p class="ml-2">
-              <span class="  text-gray-900 uppercase" > creative   </span> 
+              <span class="  text-gray-900 uppercase" > Creativo   </span> 
             </p>
           </li>         
         </ul>
@@ -265,7 +267,9 @@ export default {
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> FRAMEWORKS </h2>
         <p class="mt-3 text-gray-600 ">
-          I like to code things from scratch and bring the most innovative designs of the voices to the different web platforms. 
+          Partir de una estructura base para elaborar proyectos con objetivos especificos eso es el conocimiento en frameworks,
+          para ello me especializado en frameworks que permiten un desarrollo mas rapido y eficaz que me permite ofrecer productos con una larga 
+          duracion y un facil mantenimiento. 
         </p>
         <ul class="list-disc space-y-2 ">
               <li class="flex items-start ">
@@ -316,7 +320,7 @@ export default {
                 <span class="h-6 flex items-center sm:h-7">
                   <img
                     class="lex-shrink-0 h-5 w-5  "
-                    src="../../assets/tailwindcss.svg"
+                    src="../../assets/tailwind.png"
                   />
                 </span>
                  <p class="ml-2">
@@ -355,8 +359,8 @@ export default {
     <div class=" h-3/4 py-4 px-8 bg-white shadow-lg rounded-lg my-20">
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> DEV TOOLS </h2>
-        <p class="mt-3 text-gray-600 ">
-          I like to code things from scratch and bring the most innovative designs of the voices to the different web platforms. 
+        <p class="mt-3 text-gray-600 pb-3 pt-2">
+         Las herramientas que todo desarrollador debe dominar y mas . 
         </p>
         <ul class="list-disc space-y-2 ">
            <li class="flex items-start">
