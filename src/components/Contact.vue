@@ -152,9 +152,6 @@ export default {
         <a href="#" v-on:click="sendMessasWatssap" class="mx-auto w-16 h-16 p-1 cursor-pointer">
           <img src="../assets/imgs/wats.png" alt="watsapp" class="mx-auto" />
         </a>
-        <a href="https://github.com/" target="blank" class="mx-auto w-16 h-16 p-1 cursor-pointer">
-          <img src="../assets/imgs/25231.png" alt="github" class />
-        </a>
     </div>
     </div>
    </div> 

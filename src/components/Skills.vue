@@ -102,7 +102,7 @@ defineProps({
   </div>
 
   <div class="sm:-mt-32">
-    <div class="max-w-md py-4 px-8 h-3/4  bg-white shadow-lg rounded-lg my-5 sm:my-20">
+    <div class="py-4 px-8  bg-white shadow-lg rounded-lg my-5 sm:my-20">
       <div class="flex justify-center md:justify-end -mt-16">
         <img
           class="w-32 h-32 rounded-full mx-auto border-2 "
@@ -241,10 +241,10 @@ defineProps({
 
 </div>
 
-<div class=" bg-blue-900 grid grid-cols-1 sm:grid-cols-6  pb-28 pt-10">
+<div class=" bg-blue-900 grid grid-cols-1 sm:grid-cols-6  pb-10 pt-10">
  
-  <div class=" col-start-1 col-end-7 sm:col-start-2 sm:col-end-4 sm:pl-14 sm:-mt-14 gap-4 pb-28 ">
-    <div class=" h-3/4 py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+  <div class=" col-start-1 col-end-7 sm:col-start-2 sm:col-end-4 sm:pl-14 -mt-20 sm:-mt-10 gap-2  ">
+    <div class=" py-4 px-8 bg-white shadow-lg rounded-lg my-20">
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> FRAMEWORKS </h2>
         <p class="mt-3 text-gray-600 ">
@@ -336,7 +336,7 @@ defineProps({
     
   </div>
 
-  <div class="mx-auto grid col-start-1 col-end-7 sm:col-start-4 sm:col-end-6 sm:pl-14 sm:-mt-14 gap-4 pb-28 ">
+  <div class="mx-auto grid col-start-1 col-end-7 sm:col-start-4 sm:col-end-6 sm:pl-14 -mt-20 sm:-mt-10 gap-4 pb-10 ">
     <div class=" h-3/4 py-4 px-8 bg-white shadow-lg rounded-lg my-20">
       <div class="text-center">
         <h2 class="mt-3 text-gray-800 text-3xl font-semibold"> DEV TOOLS </h2>

@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-            <div class="h-full bg-cover bg-center" style="background-image: url(../../public/971laptop.png);  ">
+            <div class="h-full bg-cover bg-center" style="background-image: url(../../971laptop.png);  ">
                 <div class="h-full bg-black opacity-25"></div>
             </div>
         </div>
