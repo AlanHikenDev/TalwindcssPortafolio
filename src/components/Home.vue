@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="bg-gray-800 grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="bg-gray-800 grid grid-cols-1 sm:grid-cols-3 ">
     
     <div class="col-span-1 sm:col-span-3 px-4 pt-7 text-center">
       <span class=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-900 text-2xl sm:text-5xl"> I work with </span>
@@ -49,12 +49,12 @@
           <div class="w-32 h-32  rounded-full bg-white  mx-auto border-2">
           <img
             class="w-20 h-20 mx-auto mt-6  "
-            src="../assets/tailwind.png"
+            src="../assets/vuetify-logo.png"
           />
           </div>
         </div>
         <div class="text-center">
-          <h2 class="mt-3 text-gray-800 text-3xl font-semibold">TAILWIND CSS</h2>
+          <h2 class="mt-3 text-gray-800 text-3xl font-semibold">VUETIFY </h2>
           <p class="mt-3 text-gray-600 ">
             Tailwind CSS is a highly customizable low-level CSS framework that allows you to create custom layouts 
             by removing the pre-defined component styles that you would need to overwrite anyway. 

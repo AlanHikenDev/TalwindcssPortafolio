@@ -50,12 +50,12 @@
           <div class="w-32 h-32  rounded-full bg-white  mx-auto border-2">
           <img
             class="w-20 h-20 mx-auto mt-6  "
-            src="../../assets/tailwind.png"
+            src="../../assets/vuetify-logo.png"
           />
           </div>
         </div>
         <div class="text-center">
-          <h2 class="mt-3 text-gray-800 text-3xl font-semibold">TAILWIND CSS</h2>
+          <h2 class="mt-3 text-gray-800 text-3xl font-semibold">VUETIFY</h2>
           <p class="mt-3 text-gray-600 ">
             Tailwind CSS es un framework CSS que permite un desarrollo ágil, basado en clases de utilidad que se pueden aplicar con facilidad en el código HTML y unos flujos de desarrollo que permiten optimizar mucho el peso del código CSS. 
           </p>
